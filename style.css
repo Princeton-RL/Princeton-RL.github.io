@@ -71,3 +71,7 @@ body#md {
 .md div.afterTitles {
     height: 90px;
 }
+
+img {
+  border-radius: 10px; /* This creates a 10px rounded corner on all sides */
+}
