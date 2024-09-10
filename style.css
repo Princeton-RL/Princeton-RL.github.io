@@ -1,77 +1,71 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:800i');
-
-body#md {
-    position: absolute;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-
-    text-align: left;
-    left: 200px;
-    right: 0px;
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 390;
+    line-height: 1.6;
+    color: #333;
     margin: 0;
     padding: 0;
-    max-width: none;
-    color: #555;
-    font-size: 15px;
-    padding-right: 20px;
-    overflow-x: hidden;
-    text-overflow: ellipses;
 }
 
-
-.md .longTOC {
-    width: 150px;
-    display: block;
-    border-right: 3px solid #E77500;
-    overflow-y:scroll;
-    font-size: 15px;
-    font-family: inherit;
-    background: #FFF;
-    
-    position: absolute;
-    top: 90px;
-    left:-190px;
-    bottom:0px;
-    margin: 0px;
-    padding: 0px;
+header {
+		width: 1000px;
+		margin: 0 auto;
+		border-bottom: 3px solid #E77500;
+    padding: 1rem 0;
 }
 
-/* no numbering of headings */
-.md h1:before, .md h2:before, .md h3:before, .md h4:before, .md h5:before, .md h6:before { content: none; }
-
-.md .longTOC a {
-    color: #000;
+h1 {
+    font-weight: 700;
+    margin: 0;
+		color: #333;
+		font-size: 28px;
 }
 
-.md .tocHeader, .md .tocNumber {
-    display: none;
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.md a,
-.md div.title, contents, .md .tocHeader,
-.md h1, .md h2, .md h3, .md h4, .md h5, .md h6,
-.md .nonumberh1, .md .nonumberh2, .md .nonumberh3, .md .nonumberh4, .md .nonumberh5, .md .nonumberh6,
-.md .shortTOC, .md .mediumTOC, .md .longTOC {
-    font-family: inherit;
+#introduction {
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+		font-size: 16px;
 }
 
-
-.md h2, .md h3, .md h4 {
-    border: none;
+h2 {
+    border-bottom: 2px solid #E77500;
+    padding: 0 0 0.5rem;
+		margin-top: 5px;
 }
 
-.md .tocTop {
-    display: inline;
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
 }
 
-.md div.title, .md div.subtitle {
-    text-align: left;
+.person {
+    text-align: center;
 }
 
-.md div.afterTitles {
-    height: 90px;
+.person img {
+    border-radius: 10%;
+    object-fit: cover;
+    width: 180px;
+    height: 180px;
+		image-rendering: -webkit-optimize-contrast;
 }
 
-img {
-  border-radius: 10px; /* This creates a 10px rounded corner on all sides */
+p {
+		margin-top: 5px;
+}
+
+a {
+    color: #E77500;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
