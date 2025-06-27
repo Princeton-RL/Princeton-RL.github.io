@@ -79,6 +79,16 @@
           <img src="assets/ben_eysenbach.png" alt="Ben Eysenbach" height="150">
           <p><a href="https://ben-eysenbach.github.io/">Ben Eysenbach</a></p>
         </div>
+
+        <div class="person">
+          <img src="assets/sophie.png" alt="Sophie Broderick" height="150">
+          <p><a href="http://sophiebroderick.com/">Sophie Broderick</a></p>
+        </div>
+        
+        <div class="person">
+          <img src="assets/eva_xie.jpg" alt="Eva Yi Xie" height="150">
+          <p><a href="https://minzsiure.github.io/">Eva Yi Xie</a></p>
+        </div>
         <div class="person">
           <img src="assets/chongyi_zheng.jpg" alt="Chongyi Zheng" height="150">
           <p><a href="https://chongyi-zheng.github.io/">Chongyi Zheng</a></p>
@@ -114,6 +124,19 @@
       </div>
     </section>
 
+
+    <section>
+      <h2>Visiting Students and Collaborators</h2>
+      <div class="people-grid">
+        <div class="person">
+          <img src="assets/michal.jpg" alt="Michał Bortkiewicz" height="150">
+          <p><a href="https://michalbortkiewicz.github.io/">Michał Bortkiewicz</a></p>
+        </div>
+      </div>
+    </section>
+
+
+
     <section id="Alumni">
       <h2>Alumni</h2>
       <div class="people-grid">
@@ -140,5 +163,31 @@
       </div>
     </section>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all elements with the class "people-grid"
+      const peopleGrids = document.querySelectorAll('.people-grid');
+
+      peopleGrids.forEach(grid => {
+        // Convert the HTMLCollection of children to an array
+        let people = Array.from(grid.children);
+
+        // Shuffle the array using Fisher-Yates (Knuth) shuffle algorithm
+        for (let i = people.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [people[i], people[j]] = [people[j], people[i]]; // ES6 destructuring swap
+        }
+
+        // Clear the current grid content
+        grid.innerHTML = '';
+
+        // Append the shuffled elements back to the grid
+        people.forEach(person => {
+          grid.appendChild(person);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
